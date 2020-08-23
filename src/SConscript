@@ -1,0 +1,10 @@
+import os 
+import scons_compiledb
+
+env = Environment(CPPPATH = [".", "../inc/", "../src/"])
+scons_compiledb.enable(env)
+
+env.Program(target="mutex_init", source="mutex_init.c")
+env.Program("alarm_main", ["alarm_main.c","alarm_thread.c"])
+env.CompileDb()
+
