@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
     }
 
   }
-
-  return status;
+  // exit() will terminate the main thread and the spawned threads.
+  // use pthread_exit() to terminate only the main thread.
+  exit(0); 
 }

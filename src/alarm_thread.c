@@ -3,6 +3,7 @@
 #include"error.h"
 #include"alarm_thread.h"
 
+// Alarm thread, main thread spawns new threads for each alarm request
 void* alarm_thread_detach(void * arg)
 {
   alarm_t * alarm = (alarm_t*)arg;

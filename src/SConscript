@@ -1,10 +1,18 @@
 import os 
 import scons_compiledb
 
-env = Environment(CPPPATH = [".", "../inc/", "../src/"])
+env = Environment(CPPPATH = [".", "../inc/","../src/"])
 scons_compiledb.enable(env)
 
-env.Program(target="mutex_init", source="mutex_init.c")
-env.Program("alarm_main", ["alarm_main.c","alarm_thread.c"])
+env.Program("alarm_mutex", 
+["./3_2_2_Locking_and_unlocking_mutex/alarm_mutex.c"])
+env.Program("cond_static", 
+["./3_3_1_creating_and_destroying_a_cond/cond_static.c"])
+env.Program("cond_dynamic",
+["./3_3_1_creating_and_destroying_a_cond/cond_dynamic.c"])
+env.Program("cond",
+["./3_3_2_waiting_on_a_cond_var/cond.c"])
+
+
 env.CompileDb()
 
