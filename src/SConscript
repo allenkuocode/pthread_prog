@@ -12,6 +12,8 @@ env.Program("cond_dynamic",
 ["./3_3_1_creating_and_destroying_a_cond/cond_dynamic.c"])
 env.Program("cond",
 ["./3_3_2_waiting_on_a_cond_var/cond.c"])
+env.Program("alarm_cond",
+["./3_3_4_alarm_with_cond_var/alarm_cond.c"])
 
 
 env.CompileDb()
